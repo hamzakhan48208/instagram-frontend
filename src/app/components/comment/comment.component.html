@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="profile">
+    <img src={{comment.profilePicture}} alt="profile">
+  </div>
+  <div class="comment">
+    <p><span class="comment-by">{{comment.username}}</span>{{comment.comment}}</p>
+    <p class="date">{{formatDate(comment.createdAt)}}</p>
+  </div>
+</div>

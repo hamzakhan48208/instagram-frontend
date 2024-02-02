@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/trademark.png" alt="logo">
+    </div>
+
+    <input class="email" placeholder="Username"  type="text" [(ngModel)]="username">
+    <input class="password" placeholder="Password" type="password" [(ngModel)]="password">
+    <button class="login" (click)="login()">
+      <p *ngIf="isLoading === false">Login</p>
+      <span *ngIf="isLoading === true" class="loader"></span>
+    </button>
+  </div>
+
+  <div class="account">
+    <p>Don't have an account ? <a [routerLink]="['/register']">Register</a></p>
+  </div>
+</div>
+

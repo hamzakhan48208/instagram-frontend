@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/trademark.png" alt="logo">
+    </div>
+
+    <div class="profile">
+      <img src={{this.url}} alt="">
+      <div class="upload">
+        <input type="file" (change)="onFileChanged($event)" id="upload" style="display:none;">
+        <label for="upload">+</label>
+      </div>
+    </div>
+
+    <input class="username" placeholder="Username"  type="text" [(ngModel)]="username" [disabled]="isEdit" >
+    <input class="password" placeholder="Password" type="password" [(ngModel)]="password" *ngIf="!isEdit">
+    <!-- <input class="bio" placeholder="Bio" type="text"> -->
+    <textarea name="bio" id="bio" rows="5" placeholder="Bio" [(ngModel)]="bio" ></textarea>
+    <button class="login"(click)="register()">
+      <p *ngIf="isLoading === false">{{!isEdit ? 'Register' : 'Update'}}</p>
+      <span *ngIf="isLoading === true" class="loader"></span>
+    </button>
+  </div>
+
+  <div class="account">
+    <p>Already have an account ? <a [routerLink]="['/login']">Log in</a></p>
+  </div>
+</div>
+

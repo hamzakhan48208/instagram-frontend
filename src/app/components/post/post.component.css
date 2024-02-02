@@ -1,0 +1,152 @@
+.container{
+  width: 450px;
+  margin-top: 40px;
+}
+.container .head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .head .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .head .profile img{
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+.container .head .profile p{
+  font-family: sans-serif;
+  font-size: 15px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.container .image {
+  margin-top: 6px;
+}
+.container .image img{
+  width: 100%;
+  border-radius: 4px;
+
+  object-fit: cover;
+}
+.container .actions{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container .actions svg{
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  padding-right: 15px;
+}
+
+.container .likes p{
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+
+}
+.container .description{
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.container span{
+  font-weight: bold;
+}
+.container .view-comments{
+  margin-top: 20px;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+}
+
+.container .comments{
+  width: 100%;
+}
+.container .comments .row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.container .comments .row input{
+  flex: 1;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 4px;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  margin-bottom: 24px;
+}
+.container .comments .row button{
+  background-color: #c4c4c4;
+
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-left: 20px;
+
+  cursor: pointer;
+}
+
+.container .head .profile .postDate{
+  font-weight: 400;
+  color: grey;
+}
+
+
+.container .actions .heart-filled{
+  fill: red;
+}
+
+@media (max-width: 720px){
+  .container{
+    width: 250px;
+    margin-top: 20px;
+
+
+  }
+  .container .head .profile img{
+    width: 30px;
+    height: 30px;
+  }
+  .container .head .profile p{
+    font-size: 13px;
+  }
+  .container .actions svg{
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+  }
+  .container .likes p{
+    font-size: 13px;
+  }
+  .container .description{
+    font-size: 12px;
+  }
+  .container .view-comments{
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .container .comments .row button{
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}

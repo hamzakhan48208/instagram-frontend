@@ -1,0 +1,43 @@
+<div class="container">
+  <app-more *ngIf="showMenu" [type]="'user'" [itemId]="profileUserInfo._id"></app-more>
+  <div class="side-nav">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div class="wrapper">
+    <div class="profile">
+      <div class="row">
+        <div class="logo">
+          <img [src]="profileUserInfo ? profileUserInfo.profilePicture : ''" alt="">
+        </div>
+
+        <div class="content">
+          <div class="content-row">
+            <h3 class="profile-name">{{profileUserInfo ? profileUserInfo.username : ""}}</h3>
+            <button [disabled]="isLoading" *ngIf="!isOwnProfile && isFollowing" class="follow" style="cursor: pointer" (click)="followUser()">Following</button>
+            <button [disabled]="isLoading" *ngIf="!isOwnProfile && !isFollowing" class="unfollow" style="cursor: pointer" (click)="followUser()">Follow</button>
+
+            <fa-icon class="more" [icon]="more" (click)="toggleMenu()" *ngIf="isOwnProfile"></fa-icon>
+          </div>
+
+          <div class="stats">
+            <p><span>{{userPosts.length}}</span> posts &nbsp;&nbsp;<span>{{totalFollowers}}</span> followers  &nbsp;&nbsp;<span>{{profileUserInfo ? profileUserInfo.following.length : ""}}</span> following</p>
+          </div>
+
+          <div class="text">
+            <p>{{profileUserInfo ? profileUserInfo.description : ""}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="image-grid">
+        <div class="image" *ngFor="let userPost of userPosts" (click)="navigateToPost(userPost)">
+          <img src={{userPost.image}} alt="">
+        </div>
+
+      </div>
+  </div>
+</div>
+</div>

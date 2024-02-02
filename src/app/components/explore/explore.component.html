@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="head">
+    <p>Explore People</p>
+  </div>
+
+  <div class="tabs">
+    <!-- <div class="tab">
+      <img src="https://images.pexels.com/photos/14807470/pexels-photo-14807470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      <p>Dribbble</p>
+    </div> -->
+
+    <div class="tab" *ngFor="let user of users" (click)="navigateToProfile(user)" style="cursor: pointer;">
+      <img src={{user.profilePicture}} alt="">
+      <p>{{user.username}}</p>
+    </div>
+
+
+    <div class="tab">
+      <a [routerLink]="['users']">View more</a>
+    </div>
+  </div>
+</div>

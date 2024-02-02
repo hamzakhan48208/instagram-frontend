@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="side-nav">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div class="create">
+    <p class="head">Create new post</p>
+    <p class="photos-head">Drag Photos here</p>
+
+    <input type="file" (change)="onFileChanged($event)" >
+    <div class="image">
+      <img src="{{url}}" class="uploaded-image">
+    </div>
+
+    <div class="profile">
+      <img src={{this.userProfilePhoto}} alt="">
+      <p>{{this.username}}</p>
+    </div>
+
+    <div class="form">
+      <textarea name="description" id="description" cols="50" rows="10" placeholder="Write a caption" autofocus [(ngModel)]="message" ></textarea>
+    </div>
+
+    <div class="post">
+      <button class="post-btn" (click)="post()">
+        <p *ngIf="isLoading === false">Post</p>
+      <span *ngIf="isLoading === true" class="loader"></span>
+      </button>
+    </div>
+  </div>
+</div>

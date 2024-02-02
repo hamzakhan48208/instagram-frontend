@@ -1,0 +1,147 @@
+.container{
+  width: 100vw;
+
+  display: flex;
+}
+.container .create{
+  flex: 1;
+  padding-left: 60px;
+  padding-top: 30px;
+}
+.container .create .head{
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.container .create .photos-head{
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 500;
+
+  margin-top: 50px;
+}
+
+.container .create .image{
+  width: 400px;
+  margin-top: 20px;
+}
+.container .create .uploaded-image{
+  width: 100%;
+  border-radius: 10px;
+
+  margin-bottom: 20px;
+}
+::-webkit-file-upload-button {
+  font-size: 15px;
+  padding: 8px 15px;
+  border-radius: 8px;
+
+  border: none;
+  outline: none;
+  background-color: #3ca6ec;
+
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.container .create .form textarea{
+  font-family: sans-serif;
+  font-size: 16px;
+
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.container .create .profile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.container .create .profile img{
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container .create .profile p{
+  margin-left: 10px;
+}
+
+.container .create .post .post-btn{
+  font-size: 15px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+
+  border: none;
+  outline: none;
+  background-color: #3ca6ec;
+
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container .create .post p{
+  margin: 0;
+  padding: 0;
+}
+
+.container .create .post .loader{
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px){
+  .container .create{
+    padding-left: 24px;
+  }
+  .container .create .head{
+    font-size: 15px;
+  }
+  .container .create .photos-head{
+    font-size: 14px;
+    margin-top: 30px;
+  }
+  ::-webkit-file-upload-button{
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .container .create .profile img{
+    width: 30px;
+    height: 30px;
+  }
+  .container .create .post .post-btn{
+    padding: 8px 15px;
+  }
+  .container .create .form textarea{
+    font-size: 14px;
+  }
+  .container .create .profile p{
+    font-size: 14px;
+  }
+  .container .create .image{
+    width: 200px;
+  }
+}

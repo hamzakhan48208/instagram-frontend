@@ -1,0 +1,45 @@
+<div class="sidebar">
+  <div class="logo">
+    <img src="../../../assets/trademark.png" alt="logo">
+    <img class="logo-mobile" src="../../../assets/instagram-logo.png" alt="">
+  </div>
+  <div class="tabs">
+
+    <div class="tab" (click)="navigateToHome()">
+      <div class="icon">
+        <fa-icon [icon]="faHouse"></fa-icon>
+      </div>
+
+      <p>Home</p>
+    </div>
+    <div class="tab" (click)="navigateToCreate()">
+      <div class="icon">
+        <fa-icon [icon]="faPlus"></fa-icon>
+      </div>
+      <p>Create</p>
+    </div>
+    <div class="tab explore" (click)="navigateToViewMore()">
+      <div class="icon">
+        <fa-icon [icon]="faCompass"></fa-icon>
+      </div>
+      <p>Explore</p>
+    </div>
+    <div class="tab" (click)="navigateToProfile()">
+      <div class="icon">
+        <img src={{userProfilePhoto}} alt="">
+      </div>
+      <p>Profile</p>
+    </div>
+
+    <div class="space">
+
+    </div>
+    <div class="tab" (click)="logOut()">
+      <div class="icon">
+        <fa-icon [icon]="faLogOut"></fa-icon>
+      </div>
+      <p>Log out</p>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-bottom: 6px;
+}
+.container .profile img{
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+}
+.container .comment p{
+  padding: 0px 0px 10px 10px;
+  margin: 0;
+}
+.container .comment{
+  font-family: sans-serif;
+
+  font-size: 15px;
+
+}
+.container .comment span{
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.container .comment{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@media (max-width: 720px){
+  .container .comment p{
+    font-size: 13px;
+  }
+}
