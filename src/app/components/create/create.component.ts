@@ -145,7 +145,7 @@ export class CreateComponent implements OnInit{
 
         alert("Post created successfully");
         //navigate to home
-        this.router.navigate[''];
+        this.router.navigate(['']);
       });
     }
     else{

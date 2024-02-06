@@ -10,9 +10,9 @@ import { Observable, of } from 'rxjs';
 export class UserService {
 
   constructor(private http: HttpClient){}
-  private url = "http://localhost:3000/api/auth/";
-  private postsUrl = "http://localhost:3000/api/post/"
-  private usersUrl = "http://localhost:3000/api/user/";
+  private url = "https://instagram-server-delta.vercel.app/api/auth/";
+  private postsUrl = "https://instagram-server-delta.vercel.app/api/post/"
+  private usersUrl = "https://instagram-server-delta.vercel.app/api/user/";
   public user : {_id: number, username: string, password: string, profilePicture: string, description: string, followers: number, followings: number};
   postDeleted = new EventEmitter();
   userChanged = new EventEmitter();
